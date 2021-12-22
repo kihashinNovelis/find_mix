@@ -3,7 +3,8 @@ import numpy as np
 import streamlit as st
 
 
-trace_stats_df = pd.read_pickle('trace_stats_df.pkl')
+# trace_stats_df = pd.read_pickle('trace_stats_df.pkl')
+trace_stats_df = pd.read_csv('trace_stats_df.csv', index_col=0)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
