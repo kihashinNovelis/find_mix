@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
+
 trace_stats_df = pd.read_pickle('trace_stats_df.pkl')
 
 # Press the green button in the gutter to run the script.
