@@ -6,7 +6,9 @@ import arviz as az
 import pickle
 
 
-comb_data = pd.read_pickle('comb_data.pkl')
+with open('comb_data.pkl', 'rb') as f:
+    comb_data = pickle.load(f)
+
 origin_list = ['Taiwan','Australia','Japan','Korea','Others','Mexico','Thailand']
 mdl_data = comb_data[['UBC','Class1','Class3','Prime','RSI','black2','Total'] + origin_list].dropna()
 var_list = ['UBC','Class1','Class3','Prime','RSI']  + origin_list
