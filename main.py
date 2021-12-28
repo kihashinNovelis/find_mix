@@ -117,7 +117,7 @@ if __name__ == '__main__':
     # s = mdl_train.loc['2021-11-04'][var_list]
     # s = pd.concat([s, s], axis=1).T
 
-    if (ubc_wt/all_wt) > 0.7:
+    if (ubc_wt/all_wt) > 0.65:
 
         st.write('%UBC: ', '{:.1%}'.format((ubc_wt/all_wt)))
 
