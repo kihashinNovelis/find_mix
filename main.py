@@ -68,17 +68,17 @@ if __name__ == '__main__':
     st.text('Please input material weight(KG) to estimate % black dross')
 
     min_value = 1
-    prime_max_value = int(round(comb_data['Prime'].quantile(0.95),-3))
-    class1_max_value = int(round(comb_data['Class1'].quantile(0.95), -3))
-    class3_max_value = int(round(comb_data['Class3'].quantile(0.95), -3))
-    rsi_max_value = int(round(comb_data['RSI'].quantile(0.95), -3))
-    korea_max_value = int(round(comb_data['Korea'].quantile(0.95), -3))
-    japan_max_value = int(round(comb_data['Japan'].quantile(0.95), -3))
-    thailand_max_value = int(round(comb_data['Thailand'].quantile(0.95), -3))
-    australia_max_value = int(round(comb_data['Australia'].quantile(0.95), -3))
-    mexico_max_value = int(round(comb_data['Mexico'].quantile(0.95), -3))
-    taiwan_max_value = int(round(comb_data['Taiwan'].quantile(0.95), -3))
-    others_max_value = int(round(comb_data['Others'].quantile(0.95), -3))
+    prime_max_value = int(round(comb_data['Prime'].quantile(0.99),-3))
+    class1_max_value = int(round(comb_data['Class1'].quantile(0.99), -3))
+    class3_max_value = int(round(comb_data['Class3'].quantile(0.99), -3))
+    rsi_max_value = int(round(comb_data['RSI'].quantile(0.99), -3))
+    korea_max_value = int(round(comb_data['Korea'].quantile(0.99), -3))
+    japan_max_value = int(round(comb_data['Japan'].quantile(0.99), -3))
+    thailand_max_value = int(round(comb_data['Thailand'].quantile(0.99), -3))
+    australia_max_value = int(round(comb_data['Australia'].quantile(0.99), -3))
+    mexico_max_value = int(round(comb_data['Mexico'].quantile(0.99), -3))
+    taiwan_max_value = int(round(comb_data['Taiwan'].quantile(0.99), -3))
+    others_max_value = int(round(comb_data['Others'].quantile(0.99), -3))
 
 
     prime_sidebar = st.sidebar.slider("Prime", min_value, prime_max_value)
